@@ -1,0 +1,25 @@
+ARISTU | GESTION DEL ESTUDIO - DEMO
+
+COMO ABRIR
+1. Descomprime el ZIP.
+2. Abre index.html en el navegador.
+3. Prueba las pantallas, crea proyectos y tareas, edita fechas, marca tareas y filtra.
+
+QUE FUNCIONA
+- Inicio con indicadores y tareas
+- Listado de tareas con busqueda y filtros
+- Crear y editar tareas, asignar responsable, prioridad, estado y fechas
+- Completar y reabrir tareas
+- Crear y editar proyectos
+- Calendario mensual con tareas por fecha
+- Seguimiento de asuntos en espera y cierre de asuntos
+- Diseno responsive para movil y ordenador
+- Datos guardados en localStorage del navegador
+
+IMPORTANTE
+Esta es una demo funcional SIN BACKEND: no hay login ni conexion a Supabase, y los cambios no se sincronizan entre dispositivos. Los datos iniciales son ficticios. El almacenamiento local puede borrarse si se limpian los datos del navegador. NO usar para informacion sensible real hasta implantar autenticacion, permisos RLS y copias de seguridad.
+
+Para ponerla en GitHub Pages, sube index.html y la carpeta assets. La fuente y la imagen decorativa del encabezado necesitan conexion a Internet; el resto funciona sin servicios externos.
+
+SIGUIENTE FASE
+Conectar Supabase Auth, PostgreSQL y politicas RLS; configurar recordatorios por email con Edge Functions/Cron y proveedor de correo.
