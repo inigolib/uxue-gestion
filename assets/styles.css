@@ -86,3 +86,12 @@
 .cal-event[data-action="open-calendar-event"]{display:block;width:100%;border:0;text-align:left;font-family:inherit;line-height:1.4;cursor:pointer;appearance:none;transition:filter .15s ease,box-shadow .15s ease}
 .cal-event[data-action="open-calendar-event"]:hover{filter:brightness(.94);box-shadow:inset 0 0 0 1px rgba(45,65,36,.28)}
 .cal-event[data-action="open-calendar-event"]:focus-visible{outline:2px solid #52694a;outline-offset:2px}
+
+/* Creación rápida desde cualquier día del calendario */
+.cal-day-clickable{cursor:pointer;transition:background .15s,border-color .15s}
+.cal-day-clickable:hover{background:#f2f4ec;border-color:#8d9a79}
+.cal-day-clickable .cal-event{cursor:pointer}
+.calendar-choice-dialog{border:1px solid #e4e1d8;border-radius:14px;padding:24px;max-width:min(440px,calc(100vw - 32px));width:100%;background:#fffdf9;color:#283127;box-shadow:0 22px 65px #0003}
+.calendar-choice-dialog::backdrop{background:#1d241b88}
+.calendar-choice-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.calendar-choice-actions button{flex:1;min-width:150px}
