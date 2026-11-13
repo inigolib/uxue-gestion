@@ -118,3 +118,40 @@
 .pending-action-row>.action-quick-inline{flex:0 0 auto;display:inline-flex;align-items:center;gap:4px;margin:0;white-space:nowrap}
 .pending-action-row .action-icon{flex:0 0 25px}
 @media(max-width:800px){.pending-action-cell{min-width:235px;width:275px}.pending-action-row>.cell-input{min-width:115px}}
+
+/* V3.13: ficha de proyecto compacta y secciones desplegables */
+.detail-accordion{border:1px solid var(--line);border-radius:17px;background:var(--card, #fff);overflow:hidden;margin-top:16px;padding:0!important}
+.detail-accordion>summary{display:flex;align-items:center;gap:12px;cursor:pointer;padding:19px 24px;font-size:18px;font-weight:650;list-style:none;user-select:none}
+.detail-accordion>summary::-webkit-details-marker{display:none}
+.detail-accordion>summary:before{content:'›';font-size:26px;line-height:16px;color:var(--olive,#475539);transform:rotate(0deg);transition:transform .16s}
+.detail-accordion[open]>summary:before{transform:rotate(90deg)}
+.detail-accordion>summary:hover{background:rgba(80,91,58,.045)}
+.detail-accordion .section-count{margin-left:auto;font-size:12px;font-weight:500;color:#746f63;background:#f1eee8;border-radius:99px;padding:5px 10px}
+.detail-accordion-content{border-top:1px solid var(--line);padding:20px 24px 24px}
+.detail-accordion-content .section-head{margin:0 0 12px;justify-content:flex-end}
+.project-task-toolbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+.project-task-toolbar label{color:#777064;font-size:13px}
+.project-task-toolbar select{max-width:180px;min-width:145px}
+.project-task-toolbar .btn{margin-left:auto}
+.project-task-item{padding:14px 0;border-top:1px solid var(--line)}
+.project-task-item:first-child{border-top:0}
+.project-task-item .task-check-label{display:flex;align-items:center;gap:10px}
+.project-task-name{font-weight:600}
+.project-task-item.task-done .project-task-name{text-decoration:line-through;opacity:.62}
+.project-task-meta{color:#777064;font-size:12px;margin:6px 0 0 27px}
+.project-task-item>p{margin:8px 0 0 27px}
+.project-task-actions{display:flex;gap:12px;justify-content:flex-end;margin-top:6px}
+@media(max-width:600px){.detail-accordion>summary{padding:16px}.detail-accordion-content{padding:16px}}
+
+/* V3.14: filtros de acciones pendientes agrupados por situación */
+#app .stats-v314{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;align-items:stretch}
+#app .stats-v314>.stat{height:100%}
+#app .stat-group-v314{display:flex;flex-direction:column;gap:6px;min-width:0}
+#app .stat-group-head-v314>.stat{width:100%;min-height:72px}
+#app .stat-group-sub-v314{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+#app .stat-group-sub-v314 .stat{min-height:66px;padding:9px 10px}
+#app .stat-group-sub-v314 .stat strong{font-size:23px}
+#app .stat-group-sub-v314 .stat .label{font-size:12px}
+#app .stat-group-sub-v314 .stat-hint{font-size:10px}
+@media(max-width:1050px){#app .stats-v314{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:550px){#app .stats-v314{grid-template-columns:1fr 1fr;gap:8px}#app .stat-group-v314{grid-column:1/-1;grid-row:2}#app .stats-v314>.stat:last-child{grid-column:1/-1}#app .stat-group-sub-v314 .stat{min-height:60px}}
