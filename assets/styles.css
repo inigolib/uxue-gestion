@@ -98,3 +98,15 @@
 
 /* Acciones pendientes y su enlace a tareas */
 .action-quick{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px;align-items:center}.action-mini{font:inherit;font-size:11px;cursor:pointer;border:1px solid #b7bfa7;background:#f1f3e9;color:#405032;padding:5px 8px;border-radius:7px;white-space:nowrap}.action-mini:hover{background:#dfe8d4}.action-quick .btn{white-space:nowrap}#completeActionDialog{max-width:min(510px,calc(100vw - 28px));width:100%}#completeActionDialog .modal-form{width:100%}
+
+/* V3.8: controles compactos en la misma linea de la accion */
+.action-quick-inline{display:inline-flex;vertical-align:middle;gap:4px;margin:0 0 0 8px;flex-wrap:nowrap;white-space:nowrap}
+.action-icon{display:inline-flex;align-items:center;justify-content:center;width:25px;height:25px;min-width:25px;padding:0;border:1px solid #b7bfa7;border-radius:6px;background:#f1f3e9;color:#405032;font:600 15px/1 inherit;cursor:pointer;vertical-align:middle}
+.action-icon:hover{background:#dfe8d4;border-color:#7f9270}
+.action-icon:focus-visible{outline:2px solid #405032;outline-offset:2px}
+
+/* V3.9: arrastrar tareas entre días */
+.cal-event.task[draggable="true"]{cursor:grab;user-select:none;-webkit-user-select:none;touch-action:pan-y}
+.cal-event.task.cal-dragging{opacity:.42;cursor:grabbing}
+.calendar-drag-active .cal-cell[data-date]{transition:background .12s,border-color .12s}
+.cal-cell.cal-drop-target{background:#e7eedf!important;border:2px dashed #52694a!important}
