@@ -155,3 +155,15 @@
 #app .stat-group-sub-v314 .stat-hint{font-size:10px}
 @media(max-width:1050px){#app .stats-v314{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:550px){#app .stats-v314{grid-template-columns:1fr 1fr;gap:8px}#app .stat-group-v314{grid-column:1/-1;grid-row:2}#app .stats-v314>.stat:last-child{grid-column:1/-1}#app .stat-group-sub-v314 .stat{min-height:60px}}
+
+/* V3.15 - cuatro tarjetas uniformes y doble filtrado compacto */
+#app .stats-v315{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;align-items:stretch}
+#app .stats-v315 .stat{height:100%;min-height:114px;padding:18px 22px}
+.action-state-filter{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 12px}
+.action-state-label{font-size:13px;color:var(--muted)}
+.action-state-options{display:flex;gap:5px;flex-wrap:wrap;padding:4px;background:#ecebe3;border-radius:12px}
+.action-state-btn{font:inherit;font-size:12px;padding:8px 13px;border:0;background:transparent;color:var(--olive);border-radius:9px;cursor:pointer}
+.action-state-btn.selected{background:var(--olive);color:#fff}
+.action-state-btn:focus-visible{outline:2px solid var(--olive);outline-offset:2px}
+@media(max-width:900px){#app .stats-v315{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:550px){#app .stats-v315{gap:8px}#app .stats-v315 .stat{padding:13px;min-height:100px}.action-state-filter{align-items:flex-start;flex-direction:column;gap:6px}}
