@@ -110,3 +110,11 @@
 .cal-event.task.cal-dragging{opacity:.42;cursor:grabbing}
 .calendar-drag-active .cal-cell[data-date]{transition:background .12s,border-color .12s}
 .cal-cell.cal-drop-target{background:#e7eedf!important;border:2px dashed #52694a!important}
+
+/* V3.10 - Acciones alineadas en una fila, con anchura controlada */
+.pending-action-cell{min-width:260px;max-width:390px;width:320px}
+.pending-action-row{display:flex;align-items:center;gap:7px;min-width:0;width:100%}
+.pending-action-row>.cell-input{flex:1 1 190px;width:100%;min-width:130px;max-width:none;box-sizing:border-box}
+.pending-action-row>.action-quick-inline{flex:0 0 auto;display:inline-flex;align-items:center;gap:4px;margin:0;white-space:nowrap}
+.pending-action-row .action-icon{flex:0 0 25px}
+@media(max-width:800px){.pending-action-cell{min-width:235px;width:275px}.pending-action-row>.cell-input{min-width:115px}}
